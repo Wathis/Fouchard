@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {#<!-- Compiled and minified CSS -->#}
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <title>{% block title %}École de conduite S.Fouchard{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block nav %}
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo title_nav">ÉCOLE DE CONDUITE S.FOUCHARD</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a class="item_nav" href="sass.html">ACCUEIL</a></li>
+                        <li><a class="item_nav" href="badges.html">FORMATION</a></li>
+                        <li><a class="item_nav" href="collapsible.html">MATERIEL</a></li>
+                        <li><a class="item_nav" href="collapsible.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        {% endblock %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

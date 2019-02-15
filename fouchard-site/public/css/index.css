@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "OnStage-Regular";
+    src: url("../font/OnStage-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: url("../font/Lato-Bold.ttf");
+}
+@font-face {
+    font-family: "Lato-Regular";
+    src: url("../font/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Lato-Italic";
+    src: url("../font/Lato-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url("../font/Lato-Light.ttf");
+}
+
+@font-face {
+    font-family: "Lato-Black";
+    src: url("../font/Lato-Black.ttf");
+}
+
+* {
+    font-family: Lato, serif;
+}
+
+nav {
+    background-color: white !important;
+}
+
+.title_nav {
+    font-family: OnStage-Regular, serif;
+    color: #731839;
+    font-size: 1.5em !important;
+    margin-left: 1%;
+}
+
+.title_nav:visited {
+    color: #731839;
+}
+
+.item_nav {
+    font-size: 0.9em;
+    color: #3E3E3E;
+}
+
+.background_index {
+    position: absolute;
+    top:0px;
+    z-index: -1;
+    background-image: url("../img/background-index.png");
+    height: 75%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.presentation_title {
+    color : white;
+    font-family: Lato-Black;
+}
+
+.presentation_description {
+    color: white;
+    font-family: Lato-Bold;
+}
+
+.button_white {
+    color: #464646;
+    background-color: white !important;
+    display: block;
+    padding-top: 12px;
+    text-align: center;
+    height: 50px !important;
+    width: 200px !important;
+    border-radius: 5px;
+    font-family: Lato-Bold;
+}
