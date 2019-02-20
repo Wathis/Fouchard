@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S.Fouchard{% endblock %}
+
+{% block body %}
+        <div class="background_materiel">
+            <div class="container">
+                <div class="presentation_title">
+                    Matériel
+                </div>
+                <div class="presentation_description">
+                    Vous trouverez dans cette section toutes les informations concernant<br />
+                    Nos véhicules ainsi que nos installations pour les formations.
+                </div>
+                <div class="row">
+                    <a href="{{ path('contact') }}" style="padding-top: 12px" class="col s7 m3 offset-m8 hoverable button_white">
+                        Nous contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="space-30"></div>
+            <div class="center">
+                <div class="title_section">NOS VÉHICULES</div>
+            </div>
+            <div class="space-30"></div>
+
+
+            <div class="row">
+
+                <div class="col s12 xl4">
+                    <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/camion_fouchard.jpeg') }})">
+
+                    </div>
+                    <div class="space-10"></div>
+                    <div class="lato_bold center">Semi</div>
+                </div>
+
+                <div class="col s12 xl4">
+                    <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/208_fouchard.jpeg') }})">
+
+                    </div>
+                    <div class="space-10"></div>
+                    <div class="lato_bold center">208</div>
+                </div>
+
+                <div class="col s12 xl4">
+                    <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/moto_fouchard.jpeg') }})">
+
+                    </div>
+                    <div class="space-10"></div>
+                    <div class="lato_bold center">Moto</div>
+                </div>
+
+
+            </div>
+
+
+            <div class="divider"></div>
+
+            <div class="space-50"></div>
+
+            <div class="center">
+                <div class="title_section">NOS INSTALLATIONS</div>
+            </div>
+
+            <div class="space-50"></div>
+
+            <div class="center">Aucune photo pour le moment.</div>
+
+            <div class="space-50"></div>
+
+        </div>
+
+{% endblock %}

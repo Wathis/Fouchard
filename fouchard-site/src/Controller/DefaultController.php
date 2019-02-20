@@ -3,14 +3,83 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends AbstractController
 {
     public function index()
     {
+        return $this->redirectToRoute('accueil');
+    }
+
+    public function accueil()
+    {
         return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
+        ]);
+    }
+
+    public function formation()
+    {
+        return $this->render('default/formation.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
+
+    public function materiel()
+    {
+        return $this->render('default/materiel.html.twig', [
+            'controller_name' => 'DefaultController',
+        ]);
+    }
+
+    public function contact(Request $request)
+    {
+        $defaultData = [];
+        $form = $this->createFormBuilder($defaultData)
+            ->add('email', EmailType::class,array(
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'Votre email',
+                    'class' => 'col s12 contact_input browser-default'
+                )
+            ))
+            ->add('object', TextType::class,array(
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'Objet du contact',
+                    'class' => 'col s12 contact_input browser-default'
+                )
+            ))
+            ->add('message', TextareaType::class,array(
+                'label' => false,
+                'data' => '',
+                'attr' => array(
+                    'placeholder' => 'Message',
+                    'class' => 'col s12 contact_text_area contact_input browser-default',
+                )
+            ))
+            ->add('send', SubmitType::class,array(
+                'label' => 'Envoyer',
+                'attr' => array(
+                    'style' => 'padding-top: 5px; cursor: pointer',
+                    'class' => 'button_purple savoir_plus',
+                )
+            ))
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+        }
+        return $this->render('default/contact.html.twig', [
+            'controller_name' => 'DefaultController',
+            'form' => $form->createView(),
         ]);
     }
 }

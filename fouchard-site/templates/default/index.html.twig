@@ -3,16 +3,221 @@
 {% block title %}S.Fouchard{% endblock %}
 
 {% block body %}
-    <div class="background_index">
-        <div class="presentation_title">
-            École de conduite S.Fouchard
+        <div class="background_index">
+            <div class="container">
+                <div class="row">
+                    <div class="col m8 s12">
+                        <div class="presentation_title">
+                            École de conduite S.Fouchard
+                        </div>
+                        <div class="presentation_description">
+                            Bienvenue sur site internet de l’école de conduite S.Fouchard <br />
+                            de Saint-Lô.
+                        </div>
+                        <a href="{{ path("contact") }}" class="button_white">
+                            Nous contacter
+                        </a>
+                    </div>
+                    <div class="col m4 hide-on-small-only">
+                        <div class="heure_ouverture">
+                            <div class="center heure_ouverture_title">Ouverture</div>
+                            <div>Du lundi au vendredi 8h - 19h</div>
+                            <div>Le samedi : 8h - 15h</div>
+                        </div>
+                        <div class="heure_code">
+                            <div class="center heure_code_title">Code (1h)</div>
+                            <div>Mardi : 18h15</div>
+                            <div>Mercredi : 14h00 et 15h00</div>
+                            <div>Jeudi : 18h15</div>
+                            <div>Vendredi : 18h15</div>
+                            <div>Samedi : 10h00 et 11h00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="presentation_description">
-            Bienvenue sur site internet de l’école de conduite S.Fouchard <br />
-            de Saint-Lô.
+
+    <div class="container">
+        <div class="space-30"></div>
+        <div class="center">
+            <div class="title_section">INFORMATIONS</div>
         </div>
-        <a href="#" class="button_white">
-            Nous contacter
-        </a>
+        <div class="space-30"></div>
+        <div class="container_view">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="lato_bold space-10">A propos</div><br />
+                    Auto école créee en 1963<br/>
+                    Gérée par Stéphane Fouchard<br/>
+                    <div class="lato_bold space-10">Horaires d'ouverture</div><br/>
+                    Du lundi au vendredi 8h - 19h<br/>
+                    Le samedi : 8h - 15h<br/>
+                    <div class="space-20"></div>
+                </div>
+
+                <div class="col s12 m4 informations_middle">
+                    <div class="lato_bold space-10 ">Coordonnées</div><br/>
+                    <span class="space-10">244 Avenue de Paris,</span><br/>
+                    50000 Saint-Lô, France<br/>
+                    auto-ecole.fouchard@orange.fr<br/>
+                    <div class="row space-10">
+                        <span class="col s6">06 08 31 36 75</span>
+                        <span class="col s6">02 33 57 12 89</span>
+                    </div>
+
+                    <div class="row">
+                        <img class="col s3 offset-s1" src="{{ asset('img/datadocke-logo.svg') }}" width="50" alt="Label qualité">
+                        <img class="col s3 offset-s1" src="{{ asset('img/qualiteLabel.svg') }}" width="50" alt="Label qualité">
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    MAP
+                </div>
+            </div>
+        </div>
+
+        <div class="space-50"></div>
+
+        <div class="divider"></div>
+
+        <div class="space-50"></div>
+
+        <div class="center">
+            <div class="title_section">NOS FORMATIONS</div>
+        </div>
+
+        <div class="space-50"></div>
+
+        <div class="row center">
+            <div class="col l4 s12">
+                <div class="view_formation container_view center">
+                    <div class="space-40"></div>
+                    <div class="image_container_formation">
+                        <img src="{{ asset('img/camion.svg') }}" height="100%" alt="">
+                    </div>
+                    <div class="space-20"></div>
+                    <div class="lato_bold">Permis poids lourd</div>
+                    <div class="space-10"></div>
+                    <div>C et CE</div>
+                </div>
+            </div>
+
+            <div class="col l4 s12">
+                <div class="view_formation container_view center">
+                    <div class="space-40"></div>
+                    <div class="image_container_formation">
+                        <img src="{{ asset('img/moto.svg') }}" height="100%"  alt="">
+                    </div>
+                    <div class="space-20"></div>
+                    <div class="lato_bold">Permis deux roues</div>
+                    <div class="space-10"></div>
+                    <div>AM, A1, A2, A</div>
+                </div>
+            </div>
+
+            <div class="col l4 s12">
+                <div class="view_formation container_view center">
+                    <div class="space-40"></div>
+                    <div class="image_container_formation">
+                        <img src="{{ asset('img/voiture.svg') }}" height="80%"  alt="">
+                    </div>
+                    <div class="space-20"></div>
+                    <div class="lato_bold">Permis voiture et remorque</div>
+                    <div class="space-10"></div>
+                    <div>B, AAC, B96 et BE</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="center">
+
+            <a href="{{ path("formation") }}" class="button_purple savoir_plus">
+                En savoir plus
+            </a>
+        </div>
+
+        <div class="space-30"></div>
+
+        <div class="container_view">
+            <div class="row">
+                <div class="col m4">
+                    <div class="lato_bold space-20">Code (1h)</div>
+                    <div class="space-10"> </div>
+                    <div>Mardi : 18h15</div>
+                    <div>Mercredi : 14h00 et 15h00</div>
+                    <div>Jeudi : 18h15</div>
+                    <div>Vendredi : 18h15</div>
+                    <div>Samedi : 10h00 et 11h00</div>
+                </div>
+
+                <div class="col m6 informations_middle">
+                    <div class="lato_bold space-20">Informations complémentaires</div><br/>
+                    Des cours supplémentaires peuvent être dispensés<br/>
+                    pendant les vacances scolaires.<br/>
+                    Supplément disponible pour s’entrainer sur internet.  <br/>
+                    <div class="space-40"></div>
+                </div>
+
+                <div class="col m2">
+                    <div class="logo-permis-un-euro">
+                        <img class="" src="{{ asset('img/permis_1_euro_par_jour.svg') }}" height="90" alt="Label qualité">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="space-50"></div>
+
+        <div class="divider"></div>
+
+        <div class="space-50"></div>
+
+        <div class="center">
+            <div class="title_section">NOTRE MATERIEL</div>
+        </div>
+
+        <div class="space-50"></div>
+
+
+        <div class="row">
+
+            <div class="col s12 xl4">
+                <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/camion_fouchard.jpeg') }})">
+
+                </div>
+                <div class="space-10"></div>
+                <div class="lato_bold center">Semi</div>
+            </div>
+
+            <div class="col s12 xl4">
+                <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/208_fouchard.jpeg') }})">
+
+                </div>
+                <div class="space-10"></div>
+                <div class="lato_bold center">208</div>
+            </div>
+
+            <div class="col s12 xl4">
+                <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/moto_fouchard.jpeg') }})">
+
+                </div>
+                <div class="space-10"></div>
+                <div class="lato_bold center">Moto</div>
+            </div>
+
+        </div>
+
+
+        <div class="center">
+
+            <a href="{{ path('materiel') }}" class="button_purple savoir_plus">
+                En savoir plus
+            </a>
+        </div>
+
+        <div class="space-30"></div>
+
     </div>
 {% endblock %}

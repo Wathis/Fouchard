@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S.Fouchard{% endblock %}
+
+{% block body %}
+
+    <div class="background_contact">
+        <div class="container">
+            <div class="presentation_title">
+                Nous contacter
+            </div>
+            <div class="presentation_description">
+                Vous trouverez dans cette section notre formulaire de contact ainsi<br/>
+                que des informations pour nous contacter.
+            </div>
+            <div class="row">
+                <a style="padding-top: 12px" class="col s12 offset-m1 xl2 offset-xl5 button_white">
+                    06 08 31 36 75
+                </a>
+                <a style="padding-top: 12px" class="col s12  m2 offset-m1 xl2 offset-xl1 button_yellow">
+                    02 33 57 12 89
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+        <div class="space-50"></div>
+
+        <div class="center">
+            <div class="title_section">FORMULAIRE DE CONTACT</div>
+        </div>
+
+        <div class="space-50"></div>
+
+        {{ form_start(form) }}
+        <div class="row">
+            {{ form_widget(form.email ) }}
+        </div>
+        <div class="row">
+            {{ form_widget(form.object ) }}
+        </div>
+        <div class="row">
+            {{ form_widget(form.message ) }}
+        </div>
+        <div class="row">
+            {{ form_widget(form.send ) }}
+        </div>
+        {{ form_end(form) }}
+
+        <div class="space-50"></div>
+    </div>
+
+{% endblock %}
