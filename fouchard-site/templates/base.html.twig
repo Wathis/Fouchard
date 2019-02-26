@@ -6,8 +6,9 @@
         {#<!-- Compiled and minified CSS -->#}
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css" rel="stylesheet" />
         <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <title>{% block title %}École de conduite S.Fouchard{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
@@ -19,7 +20,25 @@
                     <a href="{{ path('index') }}" class="brand-logo title_nav">ÉCOLE DE CONDUITE S.FOUCHARD</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a class="item_nav" href="{{ path('index') }}"><span class="{{ 'accueil' in url_page ? 'active' }}">ACCUEIL</span></a></li>
-                        <li><a class="item_nav" href="{{ path('formation') }}"><span class="{{ 'formation' in url_page ? 'active' }}">FORMATION</span></a></li>
+                        <li>
+                            <div class="dropdownmenu">
+                                <span class="item_nav">FORMATIONS <span class="fleche_bas">&#8964;</span></span>
+                                <div class="dropdownmenu-content">
+                                    <a href="{{ path('formation_voiture') }}">
+                                        <span class="{{ 'voiture' in url_page ? 'active' }}">Voiture</span>
+                                    </a>
+                                    <a href="{{ path('formation_moto') }}">
+                                        <span class=" {{ 'moto' in url_page ? 'active' }}">Moto</span>
+                                    </a>
+                                    <a href="{{ path('formation_poid_lourd') }}">
+                                        <span class="{{ 'poid-lourd' in url_page ? 'active' }}">Poid Lourd</span>
+                                    </a>
+                                    <a href="{{ path('formation_remorque') }}">
+                                        <span class="{{ 'remorque' in url_page ? 'active' }}">Remorque</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
                         <li><a class="item_nav" href="{{ path('materiel') }}"><span class="{{ 'materiel' in url_page ? 'active' }}">MATERIEL</span></a></li>
                         <li><a class="item_nav" href="{{ path('contact') }}"><span class="{{ 'contact' in url_page ? 'active' }}">CONTACT</span></a></li>
                     </ul>
@@ -66,6 +85,8 @@
             </div>
         </footer>
 
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        {% endblock %}
     </body>
 </html>

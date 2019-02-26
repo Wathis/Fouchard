@@ -6,14 +6,30 @@ accueil:
     path: /accueil
     controller: App\Controller\DefaultController::accueil
 
-formation:
-    path: /formation
-    controller: App\Controller\DefaultController::formation
+formations:
+    path: /formations
+    controller: App\Controller\FormationController::index
+
+formation_voiture:
+    path: /formation/voiture
+    controller: App\Controller\FormationController::formation_voiture
+
+formation_moto:
+    path: /formation/moto
+    controller: App\Controller\FormationController::formation_moto
+
+formation_poid_lourd:
+    path: /formation/poid-lourd
+    controller: App\Controller\FormationController::formation_poid_lourd
+
+formation_remorque:
+    path: /formation/remorque
+    controller: App\Controller\FormationController::formation_remorque
 
 materiel:
     path: /materiel
-    controller: App\Controller\DefaultController::materiel
+    controller: App\Controller\MaterielController::materiel
 
 contact:
     path: /contact
-    controller: App\Controller\DefaultController::contact
+    controller: App\Controller\ContactController::contact

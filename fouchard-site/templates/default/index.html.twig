@@ -3,7 +3,7 @@
 {% block title %}S.Fouchard{% endblock %}
 
 {% block body %}
-        <div class="background_index">
+        <div class="background-image background_index">
             <div class="container">
                 <div class="row">
                     <div class="col m8 s12">
@@ -38,11 +38,11 @@
         </div>
 
     <div class="container">
-        <div class="space-30"></div>
-        <div class="center">
-            <div class="title_section">INFORMATIONS</div>
-        </div>
-        <div class="space-30"></div>
+
+        {% with {'title': 'INFORMATIONS',} %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
         <div class="container_view">
             <div class="row">
                 <div class="col s12 m4">
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="col s12 m4">
-                    MAP
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
@@ -81,13 +81,10 @@
 
         <div class="divider"></div>
 
-        <div class="space-50"></div>
 
-        <div class="center">
-            <div class="title_section">NOS FORMATIONS</div>
-        </div>
-
-        <div class="space-50"></div>
+        {% with {'title': 'NOS FORMATIONS',} %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
 
         <div class="row center">
             <div class="col l4 s12">
@@ -132,7 +129,7 @@
 
         <div class="center">
 
-            <a href="{{ path("formation") }}" class="button_purple savoir_plus">
+            <a href="{{ path("formations") }}" class="button_purple savoir_plus">
                 En savoir plus
             </a>
         </div>
@@ -172,13 +169,10 @@
 
         <div class="divider"></div>
 
-        <div class="space-50"></div>
 
-        <div class="center">
-            <div class="title_section">NOTRE MATERIEL</div>
-        </div>
-
-        <div class="space-50"></div>
+        {% with {'title': 'NOTRE MATERIEL',} %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
 
 
         <div class="row">
@@ -220,4 +214,18 @@
         <div class="space-30"></div>
 
     </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js"></script>
+    <script>
+        mapboxgl.accessToken = "pk.eyJ1IjoiZGVsYXVuYXltYXRoaXMiLCJhIjoiY2pzbTl4bWt0MzZyZTQ0bzZxdTNvcjc2byJ9.QMRFVzlQmUHt6lehlTUIvg";
+    </script>
+    <script src="{{ asset('js/mapkick.js') }}"></script>
+    <script>
+        console.log("ici");
+        new Mapkick.Map("map", [{latitude: 49.1158, longitude: -1.0715400000000272, label: 'École de conduite S.Fouchard',
+            zoom: 15}]);
+    </script>
 {% endblock %}

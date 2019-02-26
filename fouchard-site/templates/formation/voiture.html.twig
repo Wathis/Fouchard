@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S.Fouchard{% endblock %}
+
+{% block body %}
+
+    {% with {
+        'background_image_css': 'background_formation',
+        'title': 'Formation voiture',
+        'description': 'Vous retrouverez dans cette section toutes les informations utiles pour notre formation voiture.',
+        'button_title': 'Explorer nos formations',
+        'href': '#',
+        }
+    %}
+        {{ block('header', 'formation/header.html.twig') }}
+    {% endwith %}
+
+
+    <div class="container">
+
+        {% with {'title': 'INFORMATIONS' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="container_view">
+            <div class="row valign-wrapper">
+                <div class="col hide-on-small-only m4 center">
+                    <img class="img_center" src="{{ asset('img/voiture.svg') }}" width="200" alt="Voiture">
+                </div>
+
+                <div class="col s12 m8">
+                    <div class="lato_bold space-20">Informations complémentaires</div><br/>
+                    Des cours supplémentaires peuvent être dispensés<br/>
+                    pendant les vacances scolaires.<br/>
+                    Supplément disponible pour s’entrainer sur internet.  <br/>
+                    <div class="space-40"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-30"></div>
+        <div class="divider"></div>
+
+        {% with {'title': 'PAPIERS' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="container_view">
+            <div class="row valign-wrapper">
+                <div class="col hide-on-small-only m2 center">
+                    <img class="img_center" src="{{ asset('img/paper.png') }}" width="100" alt="Voiture">
+                </div>
+
+                <div class="col s12 m8">
+                    <div class="lato_bold space-20">Informations complémentaires</div><br/>
+                    Des cours supplémentaires peuvent être dispensés<br/>
+                    pendant les vacances scolaires.<br/>
+                    Supplément disponible pour s’entrainer sur internet.  <br/>
+                    <div class="space-40"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

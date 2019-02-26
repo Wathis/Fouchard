@@ -3,7 +3,7 @@
 {% block title %}S.Fouchard{% endblock %}
 
 {% block body %}
-        <div class="background_materiel">
+        <div class="background-image background_materiel">
             <div class="container">
                 <div class="presentation_title">
                     Matériel
@@ -22,11 +22,11 @@
 
 
         <div class="container">
-            <div class="space-30"></div>
-            <div class="center">
-                <div class="title_section">NOS VÉHICULES</div>
-            </div>
-            <div class="space-30"></div>
+
+            {% with {'title': 'NOS VÉHICULES',} %}
+                {{ block('section_title', 'util.html.twig') }}
+            {% endwith %}
+
 
 
             <div class="row">
@@ -61,13 +61,9 @@
 
             <div class="divider"></div>
 
-            <div class="space-50"></div>
-
-            <div class="center">
-                <div class="title_section">NOS INSTALLATIONS</div>
-            </div>
-
-            <div class="space-50"></div>
+            {% with {'title': 'NOS INSTALLATIONS',} %}
+                {{ block('section_title', 'util.html.twig') }}
+            {% endwith %}
 
             <div class="center">Aucune photo pour le moment.</div>
 

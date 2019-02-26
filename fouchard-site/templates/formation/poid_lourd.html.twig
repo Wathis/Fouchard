@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S.Fouchard{% endblock %}
+
+{% block body %}
+
+    {% with {
+        'background_image_css': 'background_formation',
+        'title': 'Formation poid lourd',
+        'description': 'Salut',
+        'button_title': 'Explorer nos formations',
+        'href': '#',
+        }
+    %}
+        {{ block('header', 'formation/header.html.twig') }}
+    {% endwith %}
+
+{% endblock %}

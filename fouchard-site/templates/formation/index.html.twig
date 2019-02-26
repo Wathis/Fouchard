@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S.Fouchard{% endblock %}
+
+{% block body %}
+    {% with {
+        'background_image_css': 'background_formation',
+        'title': 'Formations',
+        'description': 'Vous retrouverez sur cette page les differentes sections de nos formations disponibles',
+        'button_title': 'Explorer nos formations',
+        'href': '#',
+        }
+    %}
+        {{ block('header', 'formation/header.html.twig') }}
+    {% endwith %}
+
+
+{% endblock %}

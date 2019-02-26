@@ -68,41 +68,34 @@ nav {
 .item_nav {
     font-size: 0.9em;
     color: #3E3E3E;
+
+}
+
+.background_image, .background_index, .background_materiel, .background_contact, .background_formation {
+    top:0px;
+    z-index: 0;
+    padding-bottom: 40px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .background_index {
-    top:0px;
-    z-index: 0;
     background-image: url("../img/background-index.png");
-    padding-bottom: 40px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .background_materiel {
-    top:0px;
-    z-index: 0;
     background-image: url("../img/materiel_background.jpg");
-    padding-bottom: 40px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
+.background_formation {
+    background-image: url("../img/route_background.png");
+}
 
 .background_contact {
-    top:0px;
-    z-index: 0;
     background-image: url("../img/contact_background.jpg");
-    padding-bottom: 40px;
     min-height: 400px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .presentation_title {
@@ -326,4 +319,57 @@ footer {
 .contact_text_area {
     height: 200px;
     resize: none;
+}
+
+.dropdownmenu {
+    position: relative;
+    display: inline-block;
+    margin-left: 7px;
+    margin-right: 15px;
+}
+
+.dropdownmenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdownmenu-content a {
+    display: block;
+    color: rgb(62, 62, 62);
+}
+
+.dropdownmenu-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdownmenu:hover .dropdownmenu-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.fleche_bas {
+    margin-left: 7px;
+    margin-right: 5px;
+    position: absolute;
+    top: -1px;
+}
+
+.max_height {
+    height: 400px;
+}
+
+.img_center {
+    margin: auto;
+    margin-top: 20px;
+}
+
+#map {
+    height: 300px;
 }
