@@ -25,14 +25,16 @@
         <div class="container_view">
             <div class="row valign-wrapper">
                 <div class="col hide-on-small-only m4 center">
-                    <img class="img_center" src="{{ asset('img/voiture.svg') }}" width="200" alt="Voiture">
+                    <img class="img_center" src="{{ asset('img/voiture.svg') }}" width="150" alt="Voiture">
                 </div>
 
-                <div class="col s12 m8">
-                    <div class="lato_bold space-20">Informations complémentaires</div><br/>
-                    Des cours supplémentaires peuvent être dispensés<br/>
-                    pendant les vacances scolaires.<br/>
-                    Supplément disponible pour s’entrainer sur internet.  <br/>
+                <div class="col s12 m8 info_formation">
+                    <div class="space-10"></div>
+                    <div class="lato_bold">Deux types de formations sont disponibles pour les voitures : <br /></div>
+                    - Formation  permis « B » voiture<br />
+                    - Filière « AAC » conduite accompagnée
+                    <div class="lato_bold">La réglementation impose un minimum de 20 heures de Conduite<br /></div>
+                    <div class="warning">Les leçons de conduite doivent être décommandées 24h à l'avance<br /></div>
                     <div class="space-40"></div>
                 </div>
             </div>
@@ -41,24 +43,189 @@
         <div class="space-30"></div>
         <div class="divider"></div>
 
-        {% with {'title': 'PAPIERS' } %}
+
+        {% with {'title': 'PIÈCES À FOURNIR' } %}
             {{ block('section_title', 'util.html.twig') }}
         {% endwith %}
 
         <div class="container_view">
             <div class="row valign-wrapper">
-                <div class="col hide-on-small-only m2 center">
-                    <img class="img_center" src="{{ asset('img/paper.png') }}" width="100" alt="Voiture">
+                <div class="col hide-on-small-only m4 center">
+                    <img class="img_center" src="{{ asset('img/paper.png') }}" width="90" alt="Papier">
                 </div>
 
-                <div class="col s12 m8">
-                    <div class="lato_bold space-20">Informations complémentaires</div><br/>
-                    Des cours supplémentaires peuvent être dispensés<br/>
-                    pendant les vacances scolaires.<br/>
-                    Supplément disponible pour s’entrainer sur internet.  <br/>
-                    <div class="space-40"></div>
+                <div class="col s12 m8 info_formation">
+                    <ul>
+                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre)</li>
+                        <li><span class="circle_li">&#9679</span>  Photocopie recto verso de la carte d'identité</li>
+                        <li><span class="circle_li">&#9679</span> Attestation d'hébergement</li>
+                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 6 mois</li>
+                        <li><span class="circle_li">&#9679</span> Attestation de recensement (16 ans) ou JDC (17 ans)</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie recto verso de la carte d'identité de l'hébergeant</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie PC si permis AM (BSR)</li>
+                    </ul>
                 </div>
             </div>
         </div>
+
+        <div class="space-30"></div>
+        <div class="divider"></div>
+
+
+        {% with {'title': 'TARIFS DES FORMATIONS' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="warning center">Les tarifs sont valables jusqu’au 30/06/2019</div>
+        <div class="space-30"></div>
+
+        <div class="container_view prix_container">
+
+            <div class="lato_bold space-20">Formation permis B</div>
+
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Frais de dossier</td>
+                        <td class="right-align">60,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Cours de code et tests illimités (1 an)</td>
+                        <td class="right-align">195,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Frais administratifs</td>
+                        <td class="right-align">30,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Evalutation conduite</td>
+                        <td class="right-align">41,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>1 leçon de conduite (1 heure)</td>
+                        <td class="right-align">41,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Redevance de 1 ETG (poste)</td>
+                        <td class="right-align">30.00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Livret de code</td>
+                        <td class="right-align">15.00 €</td>
+                    </tr>
+                    <tr class="no_underline">
+                        <td>Code sur internet pack web (optionnel)</td>
+                        <td class="right-align">30,00 €</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="space-40"></div>
+
+        <div class="container_view prix_container">
+            <div class="lato_bold space-20">Filière AAC (Conduite Accompagnée)</div>
+
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Frais de dossier</td>
+                        <td class="right-align">60,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Cours de code et tests illimités (1 an)</td>
+                        <td class="right-align">195,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Frais administratifs</td>
+                        <td class="right-align">30,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Evalutation conduite</td>
+                        <td class="right-align">41,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>1 leçon de conduite (1 heure)</td>
+                        <td class="right-align">41,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Frais d'accompagnement examen conduite</td>
+                        <td class="right-align">41.00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Deux rendez-vous pédagogiques (RVP) de 3 heures</td>
+                        <td class="right-align">130.00 €</td>
+                    </tr>
+                    <tr>
+                        <td>2 heures de conduite avec accompagnateur</td>
+                        <td class="right-align">82.00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Redevance de 1 ETG (poste)</td>
+                        <td class="right-align">30.00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Livret de code</td>
+                        <td class="right-align">15.00 €</td>
+                    </tr>
+                    <tr class="no_underline">
+                        <td>Code sur internet pack web (optionnel)</td>
+                        <td class="right-align">30,00 €</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="space-20">En cas d'ajournement, les prestations seront facturées au tarif en vigueur</div>
+            <div class="space-20"></div>
+        </div>
+
+        <div class="space-30"></div>
+        <div class="divider"></div>
+        <div class="space-30"></div>
+
+        {% with {'title': 'CONDITIONS DE RÈGLEMENT' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="space-30"></div>
+
+        <div class="container_view prix_container">
+            <div class="lato_bold space-20">Formation conduite accompagnée (AAC)</div>
+
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                <tr>
+                    <td>A l'inscription</td>
+                    <td class="right-align">300,00 €</td>
+                </tr>
+                <tr>
+                    <td>1<sup>ère</sup> leçon de conduite</td>
+                    <td class="right-align">300,00 €</td>
+                </tr>
+                <tr>
+                    <td>10<sup>ème</sup> leçon de conduite</td>
+                    <td class="right-align">300,00 €</td>
+                </tr>
+                <tr>
+                    <td>20<sup>ème</sup> leçon de conduite</td>
+                    <td class="right-align">348,00 €</td>
+                </tr>
+                <tr>
+                    <td>1<sup>er</sup> rendez-vous pédagogique</td>
+                    <td class="right-align">110,00 €</td>
+                </tr>
+                <tr>
+                    <td>Frais d'accompagnement</td>
+                    <td class="right-align">41,00 €</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="space-20">Leçons supplémentaires si besoin, au-delà des 20 heures réglementaires seront facturées au tarif en vigueur</div>
+            <div class="space-20"></div>
+        </div>
+
+        <div class="space-40"></div>
     </div>
 {% endblock %}

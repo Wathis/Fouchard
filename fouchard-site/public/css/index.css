@@ -194,6 +194,7 @@ nav {
     -webkit-box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 48px -11px rgba(0,0,0,0.2);
+    border-radius: 5px;
     padding: 10px;
     padding-bottom: 1px;
 }
@@ -372,4 +373,25 @@ footer {
 
 #map {
     height: 300px;
+}
+
+.prix_container  {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.warning {
+    color : #FF1F1F
+}
+
+.no_underline {
+    border-bottom: none;
+}
+
+.info_formation {
+    line-height: 30px;
+}
+
+.circle_li {
+    margin-right: 10px;
 }
