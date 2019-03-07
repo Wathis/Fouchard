@@ -14,9 +14,9 @@ formation_voiture:
     path: /formation/voiture
     controller: App\Controller\FormationController::formation_voiture
 
-formation_moto:
-    path: /formation/moto
-    controller: App\Controller\FormationController::formation_moto
+formation_deux_roues:
+    path: /formation/deux-roues
+    controller: App\Controller\FormationController::formation_deux_roues
 
 formation_poid_lourd:
     path: /formation/poid-lourd

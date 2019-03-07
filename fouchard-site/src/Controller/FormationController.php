@@ -20,9 +20,9 @@ class FormationController extends AbstractController
             'controller_name' => 'FormationController',
         ]);
     }
-    public function formation_moto()
+    public function formation_deux_roues()
     {
-        return $this->render('formation/moto.html.twig', [
+        return $this->render('formation/deux_roues.html.twig', [
             'controller_name' => 'FormationController',
         ]);
     }

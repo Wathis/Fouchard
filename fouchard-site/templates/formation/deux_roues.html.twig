@@ -1,0 +1,190 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S.Fouchard{% endblock %}
+
+{% block body %}
+
+    {% with {
+        'background_image_css': 'background_formation',
+        'title': 'Formations deux roues',
+        'description': 'Vous retrouverez dans cette section toutes les informations utiles pour nos formations deux roues.',
+        'button_title': 'Explorer nos formations',
+        'href': '#',
+        }
+    %}
+        {{ block('header', 'formation/header.html.twig') }}
+    {% endwith %}
+
+
+    <div class="container">
+
+        {% with {'title': 'INFORMATIONS' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="container_view">
+            <div class="row valign-wrapper">
+                <div class="col hide-on-small-only m4 center">
+                    <img class="img_center" src="{{ asset('img/moto.svg') }}" width="150" alt="Moto">
+                </div>
+
+                <div class="col s12 m8 info_formation">
+                    <div class="space-10"></div>
+                    <div class="lato_bold">Deux types de formations sont disponibles pour les deux roues : <br /></div>
+                    - Formation  permis « AM » (BSR).<br />
+                    - Formation permis « A1, A2 et A ».
+                    <div>Prévoir carte d'identité valide et permis de conduire pour l'examen.<br /></div><br />
+                    <div class="lato_bold">Se munir : </div>
+                    - Un casque.<br />
+                    - Une paire de gant.<br />
+                    - Un blouson.<br />
+                    <div class="space-40"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-30"></div>
+        <div class="divider"></div>
+
+
+        {% with {'title': 'PIÈCES À FOURNIR' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="container_view">
+            <div class="row valign-wrapper">
+                <div class="col hide-on-small-only m4 center">
+                    <img class="img_center" src="{{ asset('img/paper.png') }}" width="90" alt="Papier">
+                </div>
+                <div class="col s12 m8 info_formation">
+                    <div class="lato_bold space-20">Formation permis moto (A1,A2,A)</div>
+                    <ul>
+                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre).</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie du permis recto verso + carte d'identite.</li>
+                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 6 mois.</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie de la JDC si - de 25 ans.</li>
+                    </ul>
+                    <div class="lato_bold space-20">Formation permis AM (BSR)</div>
+                    <ul>
+                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre).</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie recto verso carte identité de l'élève et du parent attestant l'hébergement.</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie de l'ASSR 1 OU 2.</li>
+                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 3 mois.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-30"></div>
+        <div class="divider"></div>
+
+
+        {% with {'title': 'TARIFS DES FORMATIONS' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="space-30"></div>
+
+        <div class="warning center">Les tarifs sont valables jusqu’au 30/12/2019.</div>
+
+        <div class="space-30"></div>
+
+        <div class="container_view prix_container">
+
+            <div class="lato_bold space-20">Formation permis AM (BSR)</div>
+
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>6 heures de pratique</td>
+                        <td class="right-align">240,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>1 heure de théorie</td>
+                        <td class="right-align">40,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>1 heure de pratique accompagnée d'un parent</td>
+                        <td class="right-align">40,00 €</td>
+                    </tr>
+                    <tr class="no_underline">
+                        <td class="lato_bold">Montant total</td>
+                        <td class="right-align">320,00 €</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="space-30"></div>
+
+        <div class="warning center">Les tarifs sont valables jusqu’au 30/06/2019.</div>
+        <div class="space-30"></div>
+
+        <div class="container_view prix_container">
+
+            <div class="lato_bold space-20">Formation permis moto</div>
+
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Frais de dossier</td>
+                        <td class="right-align">60,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Frais d'accompagnement à Carentan</td>
+                        <td class="right-align">55,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>1 leçon plateau ou circulation 1 heure</td>
+                        <td class="right-align">41,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Evalutation conduite (1 heure)</td>
+                        <td class="right-align">41,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Frais administratif</td>
+                        <td class="right-align">30,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Un forfait code illimité (1 an)</td>
+                        <td class="right-align">60.00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Redevance de l'ETG (Poste)</td>
+                        <td class="right-align">30.00 €</td>
+                    </tr>
+                    <tr class="no_underline">
+                        <td>Code sur internet pack web (optionnel)</td>
+                        <td class="right-align">30,00 €</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <div class="space-10"></div>
+            <div class="lato_bold space-20">A savoir </div>
+
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                <tr>
+                    <td>125 cm<sup>3</sup> : 7h de formation</td>
+                    <td class="right-align">294,00 €</td>
+                </tr>
+                <tr class="no_underline">
+                    <td>Passerelle A2 - A</td>
+                    <td class="right-align">294,00 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="space-30"></div>
+
+    </div>
+
+{% endblock %}
