@@ -9,14 +9,14 @@
         'title': 'Formations deux roues',
         'description': 'Vous retrouverez dans cette section toutes les informations utiles pour nos formations deux roues.',
         'button_title': 'Explorer nos formations',
-        'href': '#',
+        'href': '#informations_formation',
         }
     %}
         {{ block('header', 'formation/header.html.twig') }}
     {% endwith %}
 
 
-    <div class="container">
+    <div class="container" id="informations_formation">
 
         {% with {'title': 'INFORMATIONS' } %}
             {{ block('section_title', 'util.html.twig') }}
@@ -31,13 +31,13 @@
                 <div class="col s12 m8 info_formation">
                     <div class="space-10"></div>
                     <div class="lato_bold">Deux types de formations sont disponibles pour les deux roues : <br /></div>
-                    - Formation  permis « AM » (BSR).<br />
-                    - Formation permis « A1, A2 et A ».
+                    - Formation  permis « AM » (BSR)<br />
+                    - Formation permis « A1, A2 et A »
                     <div>Prévoir carte d'identité valide et permis de conduire pour l'examen.<br /></div><br />
                     <div class="lato_bold">Se munir : </div>
-                    - Un casque.<br />
-                    - Une paire de gant.<br />
-                    - Un blouson.<br />
+                    - Un casque<br />
+                    - Une paire de gant<br />
+                    - Un blouson<br />
                     <div class="space-40"></div>
                 </div>
             </div>
@@ -57,19 +57,19 @@
                     <img class="img_center" src="{{ asset('img/paper.png') }}" width="90" alt="Papier">
                 </div>
                 <div class="col s12 m8 info_formation">
-                    <div class="lato_bold space-20">Formation permis moto (A1,A2,A)</div>
+                    <div class="lato_bold space-20">Formation permis moto (A1,A2,A) : </div>
                     <ul>
-                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre).</li>
-                        <li><span class="circle_li">&#9679</span> Photocopie du permis recto verso + carte d'identite.</li>
-                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 6 mois.</li>
-                        <li><span class="circle_li">&#9679</span> Photocopie de la JDC si - de 25 ans.</li>
+                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre)</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie du permis recto verso + carte d'identite</li>
+                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 6 mois</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie de la JDC si - de 25 ans</li>
                     </ul>
-                    <div class="lato_bold space-20">Formation permis AM (BSR)</div>
+                    <div class="lato_bold space-20">Formation permis AM (BSR) : </div>
                     <ul>
-                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre).</li>
-                        <li><span class="circle_li">&#9679</span> Photocopie recto verso carte identité de l'élève et du parent attestant l'hébergement.</li>
-                        <li><span class="circle_li">&#9679</span> Photocopie de l'ASSR 1 OU 2.</li>
-                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 3 mois.</li>
+                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre)</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie recto verso carte identité de l'élève et du parent attestant l'hébergement</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie de l'ASSR 1 OU 2</li>
+                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 3 mois</li>
                     </ul>
                 </div>
             </div>

@@ -5,11 +5,6 @@ index:
 accueil:
     path: /accueil
     controller: App\Controller\DefaultController::accueil
-
-formations:
-    path: /formations
-    controller: App\Controller\FormationController::index
-
 formation_voiture:
     path: /formation/voiture
     controller: App\Controller\FormationController::formation_voiture

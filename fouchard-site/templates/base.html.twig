@@ -17,6 +17,7 @@
             <nav>
                 <div class="nav-wrapper">
                     {% set url_page = app.request.uri %}
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger sidenav-button"><i class="material-icons">menu</i></a>
                     <a href="{{ path('index') }}" class="brand-logo title_nav">ÉCOLE DE CONDUITE S.FOUCHARD</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a class="item_nav" href="{{ path('index') }}"><span class="{{ 'accueil' in url_page ? 'active' }}">ACCUEIL</span></a></li>
@@ -44,49 +45,49 @@
                     </ul>
                 </div>
             </nav>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a class="item_nav" href="{{ path('index') }}"><span class="{{ 'accueil' in url_page ? 'active' }} lato_bold">Accueil</span></a></li>
+                <li><a class="lato_bold">Formations <span style="margin-left: 6px">&#8964;</span></a></li>
+                <li>
+                    <a class="sublink" href="{{ path('formation_voiture') }}">
+                        <span class="{{ 'voiture' in url_page ? 'active' }}">Voiture</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sublink" href="{{ path('formation_deux_roues') }}">
+                        <span class=" {{ 'deux-roues' in url_page ? 'active' }}">Deux roues</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sublink" href="{{ path('formation_poid_lourd') }}">
+                        <span class="{{ 'poid-lourd' in url_page ? 'active' }}">Poids Lourd</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sublink" href="{{ path('formation_remorque') }}">
+                        <span class="{{ 'remorque' in url_page ? 'active' }}">Remorque</span>
+                    </a>
+                </li>
+                <li><a class="item_nav" href="{{ path('materiel') }}"><span class="{{ 'materiel' in url_page ? 'active' }} lato_bold">Materiel</span></a></li>
+                <li><a class="item_nav" href="{{ path('contact') }}"><span class="{{ 'contact' in url_page ? 'active' }} lato_bold">Contact</span></a></li>
+            </ul>
         {% endblock %}
         {% block body %}{% endblock %}
 
         <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col m4 s12">
-                        <div class="lato_bold center">Code (1h)</div>
-                        <div class="space-10"> </div>
-                        <div>Mardi : 18h15</div>
-                        <div>Mercredi : 14h00 et 15h00</div>
-                        <div>Jeudi : 18h15</div>
-                        <div>Vendredi : 18h15</div>
-                        <div>Samedi : 10h00 et 11h00</div>
-                    </div>
-
-                    <div class="col m4 s12 footer-middle">
-                        <div class="lato_bold center">Horaires d'ouverture</div>
-                        <div class="space-10"> </div>
-                        <div>
-                            Du lundi au vendredi de 8h à 19h<br/>
-                            Le samedi de 8h à 15h
-                        </div>
-                    </div>
-
-                    <div class="col m4 s12">
-                        <div class="lato_bold center">Coordonnées</div>
-                        <div class="space-10"> </div>
-                        <div>
-                            244 Avenue de Paris,  50000 Saint-Lô, France<br/>
-                            02 33 57 12 89<br/>
-                            06 08 31 36 75<br/>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="center">
-                © Copyrights École de conduite S. Fouchard - 1963 <br/> E0805005170 - Agréé n°517
+                © Copyrights École de conduite S. Fouchard - 1963 <br/> E0805005170 - Agréé n°517 <br /> Siret N°50097424100019 - TVA infracommunautaire n°17 431906502
             </div>
         </footer>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+            });
+        </script>
         {% block javascripts %}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
         {% endblock %}
     </body>
 </html>

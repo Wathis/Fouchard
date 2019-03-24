@@ -9,13 +9,13 @@
         'title': 'Formation remorque',
         'description': 'Vous retrouverez dans cette section toutes les informations utiles pour nos formations remorque.',
         'button_title': 'Explorer nos formations',
-        'href': '#',
+        'href': '#informations_formation',
         }
     %}
         {{ block('header', 'formation/header.html.twig') }}
     {% endwith %}
 
-    <div class="container">
+    <div class="container" id="informations_formation">
 
         {% with {'title': 'INFORMATIONS' } %}
             {{ block('section_title', 'util.html.twig') }}
@@ -26,10 +26,10 @@
                 <div class="col s12 m10 offset-m1 info_formation">
                     <div class="space-10"></div>
                     <div class="lato_bold">Deux types de formations sont disponibles pour les remorques : <br /></div>
-                    - Formation « B96 ».<br />
-                    - Formation « BE ».
-                    <div>La formation B96 est pour les ensembles des véhicules dont la somme des PTAC (véhicules tracteur et tracté) ne dépassent pas les 4250 kgs<br /></div>
-                    <div class="lato_bold">Prévoir carte d'identité et permis de conduire en cours de validité<br /></div>
+                    - Formation « B96 »<br />
+                    - Formation « BE »
+                    <div>La formation B96 est pour les ensembles des véhicules dont la somme des PTAC (véhicules tracteur et tracté) ne dépassent pas les 4250 kgs.<br /></div>
+                    <div class="lato_bold">Prévoir carte d'identité et permis de conduire en cours de validité.<br /></div>
                     <div class="space-10"></div>
                 </div>
             </div>
@@ -51,10 +51,10 @@
                 <div class="col s12 m8 info_formation">
                     <div class="lato_bold space-20">Formation permis remorque (B96, BE)</div>
                     <ul>
-                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre).</li>
-                        <li><span class="circle_li">&#9679</span> Photocopie du permis recto verso + carte d'identite.</li>
-                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 3 mois.</li>
-                        <li><span class="circle_li">&#9679</span> Photocopie de la JDC si - de 25 ans.</li>
+                        <li><span class="circle_li">&#9679</span> 2 e-photo (photo numérisée avec code barre)</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie du permis recto verso + carte d'identite</li>
+                        <li><span class="circle_li">&#9679</span> Justificatif de domicile de moins de 3 mois</li>
+                        <li><span class="circle_li">&#9679</span> Photocopie de la JDC si - de 25 ans</li>
                     </ul>
                 </div>
             </div>
@@ -70,29 +70,7 @@
 
         <div class="space-30"></div>
 
-        <div class="warning center">Les tarifs sont valables jusqu’au 30/12/2019.</div>
-
-        <div class="space-30"></div>
-
-        <div class="container_view prix_container">
-            <div class="space-10"></div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td class="lato_bold">Formation traditionnelle</td>
-                        <td class="right-align">60,00 €/heure</td>
-                    </tr>
-                    <tr class="no_underline">
-                        <td>En cas d'ajournement : 2 heures de pratique + frais accompagnement</td>
-                        <td class="right-align">100,00 €</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
-
-
-        <div class="space-30"></div>
+        <div class="warning center">Les tarifs sont valables jusqu’au 31/12/2019.</div>
 
         <div class="space-30"></div>
 
@@ -124,7 +102,7 @@
             <div class="lato_bold space-20 center">Formation permis BE</div>
 
             <div class="space-10"></div>
-            <div class="lato_bold space-20">Sans code voiture (E.T.G) : permis de - de 5 ans</div>
+            <div class="lato_bold space-20">Sans code voiture (E.T.G) : permis de - de 5 ans : </div>
 
             <div class="space-10"></div>
             <table>
@@ -147,7 +125,7 @@
 
 
             <div class="space-10"></div>
-            <div class="lato_bold space-20">Avec code voiture (E.T.G) : permis de + de 5 ans</div>
+            <div class="lato_bold space-20">Avec code voiture (E.T.G) : permis de + de 5 ans : </div>
 
             <div class="space-10"></div>
             <table>
@@ -177,6 +155,25 @@
 
         </div>
         <div class="space-30"></div>
+
+        <div class="container_view prix_container">
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                <tr>
+                    <td class="lato_bold">Formation traditionnelle</td>
+                    <td class="right-align">60,00 €/heure</td>
+                </tr>
+                <tr class="no_underline">
+                    <td>En cas d'ajournement : 2 heures de pratique + frais accompagnement</td>
+                    <td class="right-align">100,00 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="space-50"></div>
 
     </div>
 

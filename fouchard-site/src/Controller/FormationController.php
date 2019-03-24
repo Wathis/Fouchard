@@ -7,13 +7,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class FormationController extends AbstractController
 {
-
-    public function index() {
-        return $this->render('formation/index.html.twig', [
-            'controller_name' => 'FormationController',
-        ]);
-    }
-
     public function formation_voiture()
     {
         return $this->render('formation/voiture.html.twig', [

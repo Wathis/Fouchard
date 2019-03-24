@@ -9,14 +9,14 @@
         'title': 'Formation voiture',
         'description': 'Vous retrouverez dans cette section toutes les informations utiles pour notre formation voiture.',
         'button_title': 'Explorer nos formations',
-        'href': '#',
+        'href': '#informations_formation',
         }
     %}
         {{ block('header', 'formation/header.html.twig') }}
     {% endwith %}
 
 
-    <div class="container">
+    <div class="container" id="informations_formation">
 
         {% with {'title': 'INFORMATIONS' } %}
             {{ block('section_title', 'util.html.twig') }}
@@ -33,8 +33,8 @@
                     <div class="lato_bold">Deux types de formations sont disponibles pour les voitures : <br /></div>
                     - Formation  permis « B » voiture<br />
                     - Filière « AAC » conduite accompagnée
-                    <div class="lato_bold">La réglementation impose un minimum de 20 heures de Conduite<br /></div>
-                    <div class="warning">Les leçons de conduite doivent être décommandées 24h à l'avance<br /></div>
+                    <div class="lato_bold">La réglementation impose un minimum de 20 heures de Conduite.<br /></div>
+                    <div class="warning">Les leçons de conduite doivent être décommandées 24h à l'avance.<br /></div>
                     <div class="space-40"></div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
             {{ block('section_title', 'util.html.twig') }}
         {% endwith %}
 
-        <div class="warning center">Les tarifs sont valables jusqu’au 30/06/2019</div>
+        <div class="warning center">Les tarifs sont valables jusqu’au 30/06/2019.</div>
         <div class="space-30"></div>
 
         <div class="container_view prix_container">
@@ -176,7 +176,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="space-20">En cas d'ajournement, les prestations seront facturées au tarif en vigueur</div>
+            <div class="space-20">En cas d'ajournement, les prestations seront facturées au tarif en vigueur.</div>
             <div class="space-20"></div>
         </div>
 
@@ -222,7 +222,7 @@
                 </tr>
                 </tbody>
             </table>
-            <div class="space-20">Leçons supplémentaires si besoin, au-delà des 20 heures réglementaires seront facturées au tarif en vigueur</div>
+            <div class="space-20">Leçons supplémentaires si besoin, au-delà des 20 heures réglementaires seront facturées au tarif en vigueur.</div>
             <div class="space-20"></div>
         </div>
 

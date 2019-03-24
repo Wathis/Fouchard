@@ -7,9 +7,9 @@
     {% with {
         'background_image_css': 'background_formation',
         'title': 'Formation poid lourd',
-        'description': 'Salut',
+        'description': 'Vous retrouverez dans cette section toutes les informations utiles pour nos formations poids lourd.',
         'button_title': 'Explorer nos formations',
-        'href': '#',
+        'href': '#informations_formation',
         }
     %}
         {{ block('header', 'formation/header.html.twig') }}
@@ -17,7 +17,7 @@
 
 
 
-    <div class="container">
+    <div class="container" id="informations_formation">>
 
         {% with {'title': 'INFORMATIONS' } %}
             {{ block('section_title', 'util.html.twig') }}
@@ -34,7 +34,7 @@
                     <div class="lato_bold">FIMO/FCO en partenariat avec Promotrans<br /></div>
                     <div class="lato_bold">Deux types de formations sont disponibles pour les poids lourds : <br /></div>
                     - Formation « C » (Avec RENAULT PRENIUM 280 DXI)<br />
-                    - Formation « EC » (Avec RENAULT T CONFORT 460).
+                    - Formation « CE » (Avec RENAULT T CONFORT 460).
                     <div class="space-10"></div>
                 </div>
             </div>
@@ -127,7 +127,76 @@
 
         <div class="space-30"></div>
 
-        <div class="warning center">Les tarifs sont valables jusqu’au 30/12/2019.</div>
+        <div class="warning center">Les tarifs sont valables jusqu’au 31/12/2019.</div>
+
+        <div class="space-30"></div>
+
+        <div class="container_view prix_container">
+            <div class="lato_bold space-20 center">Formation permis « C » porteur</div>
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Coût de ka formation H.T</td>
+                        <td class="right-align">1216.67 €</td>
+                    </tr>
+                    <tr>
+                        <td>T.V.A à 20 %</td>
+                        <td class="right-align">243.33 €</td>
+                    </tr>
+                    <tr class="no_underline">
+                        <td class="lato_bold">Total T.T.C</td>
+                        <td class="right-align">1460.00 €</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="space-30"></div>
+
+        <div class="container_view prix_container">
+            <div class="lato_bold space-20 center">Formation permis « CE » véhicule articulé</div>
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                <tr>
+                    <td>Coût de ka formation H.T</td>
+                    <td class="right-align">1341.67 €</td>
+                </tr>
+                <tr>
+                    <td>T.V.A à 20 %</td>
+                    <td class="right-align">268.33 €</td>
+                </tr>
+                <tr class="no_underline">
+                    <td class="lato_bold">Total T.T.C</td>
+                    <td class="right-align">1610.00 €</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="space-30"></div>
+
+        <div class="container_view prix_container">
+            <div class="lato_bold space-20 center">Formation permis « C  + CE (26 t + 44 t) » </div>
+            <div class="space-10"></div>
+            <table>
+                <tbody>
+                <tr>
+                    <td>Coût de ka formation H.T</td>
+                    <td class="right-align">2166.67 €</td>
+                </tr>
+                <tr>
+                    <td>T.V.A à 20 %</td>
+                    <td class="right-align">433.33 €</td>
+                </tr>
+                <tr class="no_underline">
+                    <td class="lato_bold">Total T.T.C</td>
+                    <td class="right-align">2600.00 €</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
         <div class="space-30"></div>
 
@@ -135,104 +204,59 @@
             <div class="space-10"></div>
             <table>
                 <tbody>
-                <tr>
-                    <td class="lato_bold">Formation traditionnelle</td>
-                    <td class="right-align">60,00 €/heure</td>
-                </tr>
-                <tr class="no_underline">
-                    <td>En cas d'ajournement : 2 heures de pratique + frais accompagnement</td>
-                    <td class="right-align">100,00 €</td>
-                </tr>
+                    <tr>
+                        <td>Heure de perfectionnement</td>
+                        <td class="right-align">80.00 € HT</td>
+                    </tr>
+                    <tr class="no_underline">
+                        <td>Code + de 5 ans : Redevande code (E.C.G)</td>
+                        <td class="right-align">30.00 €</td>
+                    </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="space-50"></div>
 
+        <div class="divider"></div>
+
+        {% with {'title': 'FIMO - FCO' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="space-20"></div>
+
+        <div class="container_view">
+
+            <div class="lato_bold space-20 center">Calendrier previsionnel FIMO et FCO Marchandises 2019</div>
+            <div class="space-20"></div>
+            <div class="row valign-wrapper">
+                <div class="col s12 m6 offset-m1 info_formation">
+                    <div class="lato_bold">FIMO</div>
+                    <ul>
+                        <li>- Du 11 février au 8 mars 2019</li>
+                        <li>- Du 8 avril au 7 mai 2019</li>
+                        <li>- Du 13 mai au 12 juin 2019</li>
+                        <li>- Du 2 au 27 septembre 2019</li>
+                        <li>- Du 25 novembre au 20 décembre 2019</li>
+                    </ul>
+                </div>
+                <div class="col s12 m5 info_formation">
+                    <div class="lato_bold">FCO</div>
+                    <ul>
+                        <li>- Du 14 au 18 janvier 2019</li>
+                        <li>- Du 25 février au 1<sup>er</sup> mars 2019</li>
+                        <li>- Du 13 au 17 mai 2019</li>
+                        <li>- Du 24 au 28 juin 2019</li>
+                        <li>- Du 16 au 20 septembre 2019</li>
+                        <li>- Du 14 au 18 octobre 2019</li>
+                        <li>- Du 25 au 29 novembre 2019</li>
+                        <li>- Du 16 au 20 décembre 2019</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
 
-        <div class="space-30"></div>
-
-        <div class="space-30"></div>
-
-        <div class="container_view prix_container">
-
-            <div class="lato_bold space-20 center">Formation permis B96</div>
-            <div class="space-10"></div>
-            <div>Par groupe de 3 personnes</div>
-            <div class="space-10"></div>
-            <table>
-                <tbody>
-                <tr>
-                    <td>7 heures de formation (plateau + route)</td>
-                </tr>
-                <tr class="no_underline">
-                    <td class="lato_bold">Forfait</td>
-                    <td class="right-align">380,00 €</td>
-                </tr>
-                </tbody>
-            </table>
-
-        </div>
-
-
-        <div class="space-30"></div>
-
-        <div class="container_view prix_container">
-
-            <div class="lato_bold space-20 center">Formation permis BE</div>
-
-            <div class="space-10"></div>
-            <div class="lato_bold space-20">Sans code voiture (E.T.G) : permis de - de 5 ans</div>
-
-            <div class="space-10"></div>
-            <table>
-                <tbody>
-                <tr>
-                    <td>Frais de dossier</td>
-                </tr>
-                <tr>
-                    <td>Frais d'accompagnement plateau-conduite</td>
-                </tr>
-                <tr>
-                    <td>15 heures formation plateau-route</td>
-                </tr>
-                <tr class="no_underline">
-                    <td class="lato_bold">Forfait</td>
-                    <td class="right-align lato_bold">670,00 €</td>
-                </tr>
-                </tbody>
-            </table>
-
-
-            <div class="space-10"></div>
-            <div class="lato_bold space-20">Avec code voiture (E.T.G) : permis de + de 5 ans</div>
-
-            <div class="space-10"></div>
-            <table>
-                <tbody>
-                <tr>
-                    <td>Frais de dossier</td>
-                    <td class="right-align">50,00 €</td>
-                </tr>
-                <tr>
-                    <td>Frais d'accompagnement plateau-conduite</td>
-                    <td class="right-align">50,00 €</td>
-                </tr>
-                <tr>
-                    <td>14 heures formation plateau-route</td>
-                    <td class="right-align">660,00 €</td>
-                </tr>
-                <tr class="no_underline">
-                    <td class="lato_bold">Forfait</td>
-                    <td class="right-align lato_bold">760,00 €</td>
-                </tr>
-                <tr class="no_underline">
-                    <td>+ Redevance E.T.G</td>
-                    <td class="right-align">30,00 €</td>
-                </tr>
-                </tbody>
-            </table>
-
-        </div>
         <div class="space-30"></div>
 
     </div>

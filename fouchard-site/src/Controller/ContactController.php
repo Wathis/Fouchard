@@ -20,7 +20,7 @@ class ContactController extends AbstractController
                 'label' => false,
                 'attr' => array(
                     'placeholder' => 'Votre email',
-                    'class' => 'col s12 contact_input browser-default'
+                    'class' => 'col s12 browser-default contact_input'
                 )
             ))
             ->add('object', TextType::class,array(
@@ -41,7 +41,7 @@ class ContactController extends AbstractController
             ->add('send', SubmitType::class,array(
                 'label' => 'Envoyer',
                 'attr' => array(
-                    'style' => 'padding-top: 5px; cursor: pointer',
+                    'style' => 'padding-top: 5px; cursor: pointer;',
                     'class' => 'button_purple savoir_plus',
                 )
             ))
