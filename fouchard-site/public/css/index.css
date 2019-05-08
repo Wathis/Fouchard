@@ -282,10 +282,15 @@ footer {
 .image_container_materiel {
     height: 250px;
     width: 300px;
-    margin: auto;
+    display: block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 20px;
+}
+
+.title_photo_materiel {
+    margin-bottom: 20px;
 }
 
 .image_container_formation {

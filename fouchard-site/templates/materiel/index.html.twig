@@ -23,51 +23,35 @@
 
         <div class="container">
 
-            {% with {'title': 'NOS VÉHICULES',} %}
-                {{ block('section_title', 'util.html.twig') }}
-            {% endwith %}
+            {% for category, photos in categories %}
 
+                <div class="divider"></div>
 
+                {% with {'title': category} %}
+                    {{ block('section_title', 'util.html.twig') }}
+                {% endwith %}
 
-            <div class="row">
+                {% if photos | length == 0 %}
+                    <div class="center">Aucune photo pour le moment.</div>
+                {% else %}
 
-                <div class="col s12 xl4">
-                    <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/camion_fouchard.jpeg') }})">
+                    <div class="row">
+                        {% for photo in photos %}
+                            <div class="col s12 xl4">
+                                <a class="container_photo image_container_materiel" target="_blank" href="{{ asset(photo) }}" style="background-image: url({{ asset(photo) }})">
 
+                                </a>
+                                <div class="space-10"></div>
+                                <div class="lato_bold center title_photo_materiel">{{ photo | give_photo_name }}</div>
+                            </div>
+                        {% endfor %}
                     </div>
-                    <div class="space-10"></div>
-                    <div class="lato_bold center">Semi</div>
-                </div>
 
-                <div class="col s12 xl4">
-                    <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/208_fouchard.jpeg') }})">
-
-                    </div>
-                    <div class="space-10"></div>
-                    <div class="lato_bold center">208</div>
-                </div>
-
-                <div class="col s12 xl4">
-                    <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/moto_fouchard.jpeg') }})">
-
-                    </div>
-                    <div class="space-10"></div>
-                    <div class="lato_bold center">Moto</div>
-                </div>
+                    <div class="space-50"></div>
+                {% endif %}
 
 
-            </div>
-
-
-            <div class="divider"></div>
-
-            {% with {'title': 'NOS INSTALLATIONS',} %}
-                {{ block('section_title', 'util.html.twig') }}
-            {% endwith %}
-
-            <div class="center">Aucune photo pour le moment.</div>
-
-            <div class="space-50"></div>
+            {% endfor %}
 
         </div>
 

@@ -51,6 +51,7 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
+            //TODO Send mail
         }
         return $this->render('contact/index.html.twig', [
             'controller_name' => 'ContactController',
