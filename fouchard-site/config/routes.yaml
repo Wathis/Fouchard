@@ -25,6 +25,10 @@ materiel:
     path: /materiel
     controller: App\Controller\MaterielController::materiel
 
+label:
+    path: /label
+    controller: App\Controller\LabelController::index
+
 contact:
     path: /contact
     controller: App\Controller\ContactController::contact

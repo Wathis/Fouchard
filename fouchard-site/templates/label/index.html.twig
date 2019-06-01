@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S.Fouchard{% endblock %}
+
+{% block body %}
+
+    <div class="background-image background_label">
+        <div class="container">
+            <div class="presentation_title">
+                Label qualité
+            </div>
+            <div class="presentation_description">
+                Vous trouverez dans cette section des informations et documents nécessaires<br/>
+                pour le label qualité.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container" id="informations_formation">
+
+        {% with {'title': 'DOCUMENTS' } %}
+            {{ block('section_title', 'util.html.twig') }}
+        {% endwith %}
+
+        <div class="container_view">
+            <div class="row valign-wrapper">
+                <div class="col s12">
+                    <div class="space-10"></div>
+                    {% if documents | length == 0 %}
+                        <div class="center">Aucun document pour le moment.</div>
+                    {% else %}
+                        <div class="row ">
+                            {% for documentPath, documentName in documents %}
+                                <div class="col s4 center valign-wrapper document" >
+                                    <i class="material-icons">attach_file</i><a target="_blank" href="{{ asset(documentPath) }}">{{ documentName }}</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+
+        <div class="space-30"></div>
+        <div class="divider"></div>
+    </div>
+
+
+    {% endblock %}

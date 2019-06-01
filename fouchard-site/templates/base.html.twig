@@ -41,6 +41,7 @@
                             </div>
                         </li>
                         <li><a class="item_nav" href="{{ path('materiel') }}"><span class="{{ 'materiel' in url_page ? 'active' }}">MATERIEL</span></a></li>
+                        <li><a class="item_nav" href="{{ path('label') }}"><span class="{{ 'label' in url_page ? 'active' }}">LABEL</span></a></li>
                         <li><a class="item_nav" href="{{ path('contact') }}"><span class="{{ 'contact' in url_page ? 'active' }}">CONTACT</span></a></li>
                     </ul>
                 </div>
@@ -69,6 +70,7 @@
                     </a>
                 </li>
                 <li><a class="item_nav" href="{{ path('materiel') }}"><span class="{{ 'materiel' in url_page ? 'active' }} lato_bold">Materiel</span></a></li>
+                <li><a class="item_nav" href="{{ path('label') }}"><span class="{{ 'label' in url_page ? 'active' }} lato_bold">Label</span></a></li>
                 <li><a class="item_nav" href="{{ path('contact') }}"><span class="{{ 'contact' in url_page ? 'active' }} lato_bold">Contact</span></a></li>
             </ul>
         {% endblock %}
@@ -76,7 +78,7 @@
 
         <footer>
             <div class="center">
-                © Copyright École de conduite S. Fouchard - 1963 <br/> E0805005170 - Agréé n°517 <br /> Siret N°50097424100019 - TVA infracommunautaire n°17 431906502
+                © Copyright École de conduite S. Fouchard - 1963 <br/> E0805005170 - Agrément <br /> Siret N°50097424100019 - N° TA intracommunautaire FR7950097424100019
             </div>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
