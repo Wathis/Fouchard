@@ -14,10 +14,10 @@
                             Bienvenue sur site internet de l’école de conduite S.Fouchard <br />
                             de Saint-Lô.
                         </div>
-                        <a href="{{ path("contact") }}" class="button_white button_header">
+                        <a href="{{ path("contact") }}" class="button_white button_header margin_20_right">
                             Nous contacter
                         </a>
-                        <a href="http://search.google.com/local/writereview?placeid=ChIJ31FADd-VC0gRA7nZ7wyvsF4" target="_blank" class="button_yellow button_header margin_20">
+                        <a href="http://search.google.com/local/writereview?placeid=ChIJ31FADd-VC0gRA7nZ7wyvsF4" target="_blank" class="button_yellow button_header">
                                 <div>Donner un avis</div>
                         </a>
                     </div>
@@ -47,7 +47,7 @@
             {{ block('section_title', 'util.html.twig') }}
         {% endwith %}
 
-        <div class="container_view">
+        <div  data-aos="fade-up" class="container_view">
             <div class="row">
                 <div class="col s12 m4">
                     <div class="lato_bold space-10">A propos</div><br />
@@ -91,7 +91,7 @@
         {% endwith %}
 
         <div class="row center">
-            <div class="col l4 s12">
+            <div data-aos="fade-left" class="col l4 s12">
                 <div class="view_formation container_view center">
                     <div class="space-40"></div>
                     <div class="image_container_formation">
@@ -105,7 +105,7 @@
             </div>
 
             <div class="col l4 s12">
-                <div class="view_formation container_view center">
+                <div data-aos="fade-up" class="view_formation container_view center">
                     <div class="space-40"></div>
                     <div class="image_container_formation">
                         <img src="{{ asset('img/moto.svg') }}" height="100%"  alt="">
@@ -117,7 +117,7 @@
                 </div>
             </div>
 
-            <div class="col l4 s12">
+            <div data-aos="fade-right"  class="col l4 s12">
                 <div class="view_formation container_view center">
                     <div class="space-40"></div>
                     <div class="image_container_formation">
@@ -140,7 +140,7 @@
 
         <div class="space-30"></div>
 
-        <div class="container_view">
+        <div data-aos="fade-up" class="container_view">
             <div class="row">
                 <div class="col m4">
                     <div class="lato_bold space-20">Code (1h)</div>
@@ -182,7 +182,7 @@
 
         <div class="row">
 
-            <div class="col s12 xl4">
+            <div data-aos="fade-left"  class="col s12 xl4">
                 <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/camion_fouchard.jpeg') }})">
 
                 </div>
@@ -190,7 +190,7 @@
                 <div class="lato_bold center">Semi</div>
             </div>
 
-            <div class="col s12 xl4">
+            <div  data-aos="fade-up" class="col s12 xl4">
                 <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/208_fouchard.jpeg') }})">
 
                 </div>
@@ -198,7 +198,7 @@
                 <div class="lato_bold center">208</div>
             </div>
 
-            <div class="col s12 xl4">
+            <div  data-aos="fade-right" class="col s12 xl4">
                 <div class="container_photo image_container_materiel" style="background-image: url({{ asset('img/moto_fouchard.jpeg') }})">
 
                 </div>
@@ -229,7 +229,6 @@
     </script>
     <script src="{{ asset('js/mapkick.js') }}"></script>
     <script>
-        console.log("ici");
         new Mapkick.Map("map", [{latitude: 49.1158, longitude: -1.0715400000000272, label: 'École de conduite S.Fouchard',
             zoom: 15}]);
     </script>

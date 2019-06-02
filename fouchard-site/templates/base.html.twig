@@ -5,9 +5,11 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         {#<!-- Compiled and minified CSS -->#}
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/materialize-1.0.0.min.css') }}">
+        <link href="{{ asset('css/material-icon.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/mapbox-gl-0.45.0.css') }}" rel="stylesheet" />
+        <link href="aos.css" rel="stylesheet">
         <!-- Compiled and minified JavaScript -->
         <title>{% block title %}École de conduite S.Fouchard{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
@@ -81,11 +83,16 @@
                 © Copyright École de conduite S. Fouchard - 1963 <br/> E0805005170 - Agrément <br /> Siret N°50097424100019 - N° TA intracommunautaire FR7950097424100019
             </div>
         </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        {#<link rel="stylesheet" href="{{ asset('js/jquery-3.3.1.min.js') }}">#}
+        <script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}" ></script>
+        <script type="text/javascript" src="{{ asset('js/materialize-1.0.0.min.js') }}" ></script>
+        <script type="text/javascript" src="{{ asset('js/aos.js') }}" ></script>
         <script>
             $(document).ready(function(){
                 $('.sidenav').sidenav();
+                AOS.init({
+                    once: true,
+                });
             });
         </script>
         {% block javascripts %}

@@ -132,9 +132,12 @@ nav {
 
 .button_header {
     display: inline-block !important;
+    margin-left: 0px;
 }
 
-
+.margin_20_right {
+    margin-right: 20px;
+}
 
 .button_white {
     color: #464646;
