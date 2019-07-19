@@ -51,7 +51,7 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
-            $message = (new \Swift_Message('Contact photo sport normandy'))
+            $message = (new \Swift_Message($data["object"]))
                 ->setFrom($data["email"])
                 ->setTo($_ENV['MAIL_RECEIVER'])
                 ->setSubject($data["object"])
