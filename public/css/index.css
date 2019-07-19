@@ -433,3 +433,26 @@ footer {
 .document a {
     color: #3E3E3E !important;
 }
+
+
+.alert-danger {
+    border: 1px solid rgb(245,198,205);
+    background-color: rgb(248,215,218);
+    color : rgb(114,28,53);
+}
+
+.alert-success {
+    border: 1px solid rgb(195,230,203);
+    background-color: rgb(212,237,218);
+    color : rgb(21,87,36);
+}
+
+.alert {
+    width: 90%;
+    border-radius: 5px;
+    padding:10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

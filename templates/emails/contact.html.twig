@@ -1,0 +1,50 @@
+<html>
+
+    <body>
+        <h2 class="title">Message de {{ email }}</h2>
+
+        <p>Vous avez reçu un message de {{ email }} depuis votre formulaire de contact sur votre site <a href="http://autoecolefouchard.fr">autoecolefouchard.fr</a>.</p>
+
+        <p>Email : {{ email }}</p>
+        <p>Objet : {{ object }}</p>
+        <p>Message : <br /><p/>
+        <p>{{ message }}</p>
+
+        <p class="footer">© Copyright Auto Ecole Fouchard {{  "now" | date("Y") }}</p>
+
+    </body>
+
+    <style>
+        @font-face {
+            font-family: "Lato-Bold";
+            src: url({{ asset('fonts/Lato-Bold.tff') }});
+        }
+        @font-face {
+            font-family: "Lato-Black";
+            src: url({{ asset('fonts/Lato-Black.tff') }});
+        }
+        @font-face {
+            font-family: "Lato-Regular";
+            src: url({{ asset('fonts/Lato-Regular.tff') }});
+        }
+        .title {
+            color: #515151;
+            font-family: Lato-Bold;
+            text-align: center;
+        }
+        .footer{
+            text-align: center;
+        }
+        p{
+            font-family: Lato-Regular;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;
+        }
+    </style>
+
+</html>

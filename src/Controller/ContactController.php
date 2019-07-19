@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ContactController extends AbstractController
 {
 
-    public function contact(Request $request)
+    public function contact(Request $request,\Swift_Mailer $mailer)
     {
         $defaultData = [];
         $form = $this->createFormBuilder($defaultData)
@@ -51,7 +51,38 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
-            //TODO Send mail
+            $message = (new \Swift_Message('Contact photo sport normandy'))
+                ->setFrom($data["email"])
+                ->setTo($_ENV['MAIL_RECEIVER'])
+                ->setSubject($data["object"])
+                ->setBody($this->renderView(
+                    'emails/contact.html.twig',
+                    array(
+                        'email' => $data['email'],
+                        'object' => $data['object'],
+                        'message' => $data['message']
+                    )
+                ), 'text/html'
+                )
+            ;
+            if (!$mailer->send($message, $errors))
+            {
+                print_r($errors);
+                $this->get('session')->getFlashBag()->add('error','Une erreur est survenue lors de l\'envoi');
+            } else {
+                $this->get('session')->getFlashBag()->add('success','Le message a bien été envoyé');
+            }
+//            $email = (new Email())
+//                ->from($data["email"])
+//                ->to('delaunaymathis@yahoo.fr')
+//                ->subject($data["object"])
+//                ->text($data["message"]);
+//            try {
+//                $mailer->send($email);
+//                $this->get('session')->getFlashBag()->add('success','Le message a bien été envoyé');
+//            } catch (TransportExceptionInterface $e) {
+//                $this->get('session')->getFlashBag()->add('error','Une erreur est survenue lors de l\'envoi');
+//            }
         }
         return $this->render('contact/index.html.twig', [
             'controller_name' => 'ContactController',

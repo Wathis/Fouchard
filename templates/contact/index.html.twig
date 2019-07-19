@@ -32,6 +32,13 @@
             {{ block('section_title', 'util.html.twig') }}
         {% endwith %}
 
+        {% for flashMessage in app.session.flashbag.get('error') %}
+            <div class="alert alert-danger">{{ flashMessage }}</div>
+        {% endfor %}
+        {% for flashMessage in app.session.flashbag.get('success') %}
+            <div class="alert alert-success">{{ flashMessage }}</div>
+        {% endfor %}
+
         {{ form_start(form) }}
         <div class="row">
             {{ form_widget(form.email ) }}
