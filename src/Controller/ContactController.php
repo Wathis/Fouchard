@@ -72,17 +72,6 @@ class ContactController extends AbstractController
             } else {
                 $this->get('session')->getFlashBag()->add('success','Le message a bien été envoyé');
             }
-//            $email = (new Email())
-//                ->from($data["email"])
-//                ->to('delaunaymathis@yahoo.fr')
-//                ->subject($data["object"])
-//                ->text($data["message"]);
-//            try {
-//                $mailer->send($email);
-//                $this->get('session')->getFlashBag()->add('success','Le message a bien été envoyé');
-//            } catch (TransportExceptionInterface $e) {
-//                $this->get('session')->getFlashBag()->add('error','Une erreur est survenue lors de l\'envoi');
-//            }
         }
         return $this->render('contact/index.html.twig', [
             'controller_name' => 'ContactController',
