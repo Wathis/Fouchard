@@ -130,6 +130,10 @@ nav {
     border: none;
 }
 
+.button_white:hover, .button_purple:hover, .button_yellow:hover {
+    opacity: 0.9;
+}
+
 .button_header {
     display: inline-block !important;
     margin-left: 0px;
